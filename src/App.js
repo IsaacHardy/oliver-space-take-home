@@ -1,23 +1,14 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import "./App.css";
 
-import Home from './Components/Home';
+import MainLayout from "./Layouts/Main";
 
 export default function OliverTakeHome() {
-  return (
-    <Router>
-      <div>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
+  const isUser = true;
 
-        </Switch>
-      </div>
-    </Router>
-  );
+  if (isUser) {
+    return <MainLayout />;
+  }
+
+  return null;
 }
